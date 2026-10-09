@@ -55,13 +55,13 @@ export function Stats() {
 
   return (
     <section ref={ref} className="relative z-10 pb-6" aria-label="Gif Downloader at a glance">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-3 px-5 sm:px-6 md:grid-cols-3 xl:grid-cols-5 lg:px-8">
+      <div className="mx-auto grid w-full min-w-0 max-w-7xl grid-cols-2 gap-3 px-5 sm:px-6 md:grid-cols-3 xl:grid-cols-5 lg:px-8">
         {stats.map((stat) => (
-          <div key={stat.label} className="rounded-3xl border border-line bg-card/90 px-5 py-7 sm:px-6">
+          <div key={stat.label} className="min-w-0 rounded-3xl border border-line bg-card/90 px-4 py-5 sm:px-6 sm:py-7">
             {stat.value === null ? (
-              <p className="text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">{stat.display}</p>
+              <p className="text-2xl leading-tight font-semibold tracking-tight sm:text-4xl">{stat.display}</p>
             ) : (
-              <p className="text-4xl font-semibold tracking-tight">
+              <p className="text-3xl font-semibold tracking-tight sm:text-4xl">
                 <Count value={stat.value} active={active} />
                 {stat.suffix}
               </p>

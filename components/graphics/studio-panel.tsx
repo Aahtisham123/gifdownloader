@@ -1,8 +1,8 @@
 export function StudioPanel() {
   return (
-    <div className="relative mx-auto h-[460px] w-full max-w-[560px] sm:h-[520px]" aria-hidden="true">
+    <div className="relative mx-auto w-full max-w-[560px] sm:h-[520px]" aria-hidden="true">
       <div className="absolute top-1/2 left-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet/25 blur-3xl" />
-      <div className="absolute inset-x-6 top-16 bottom-14 rounded-[1.7rem] border border-white/10 bg-[#0d1117]/80 p-4 shadow-[0_30px_80px_-40px_rgb(99_102_241_/_0.8)] backdrop-blur-xl sm:inset-x-10 sm:p-5">
+      <div className="relative rounded-[1.7rem] border border-white/10 bg-[#0d1117]/80 p-4 shadow-[0_30px_80px_-40px_rgb(99_102_241_/_0.8)] backdrop-blur-xl sm:absolute sm:inset-x-10 sm:top-16 sm:bottom-14 sm:p-5">
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-white/25" />
           <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
@@ -48,22 +48,24 @@ export function StudioPanel() {
           ))}
         </div>
       </div>
-      <div className="float-slow absolute top-6 left-0 w-40 rounded-2xl border border-white/10 bg-[#111827]/90 p-3 shadow-xl backdrop-blur-md">
+      <div className="mt-4 grid gap-3 sm:contents">
+      <div className="float-slow rounded-2xl border border-white/10 bg-[#111827]/90 p-3 shadow-xl backdrop-blur-md sm:absolute sm:top-6 sm:left-0 sm:mt-0 sm:w-40">
         <p className="text-[11px] text-muted">File size</p>
         <p className="mt-1 font-display text-lg text-white">In range</p>
         <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
           <span className="block h-full w-[86%] rounded-full bg-cyan" />
         </div>
       </div>
-      <div className="float-slower absolute top-8 right-0 w-44 rounded-2xl border border-white/10 bg-[#111827]/90 p-3 shadow-xl backdrop-blur-md">
+      <div className="float-slower rounded-2xl border border-white/10 bg-[#111827]/90 p-3 shadow-xl backdrop-blur-md sm:absolute sm:top-8 sm:right-0 sm:w-44">
         <p className="text-[11px] text-muted">Preview</p>
         <p className="mt-1 font-display text-lg text-white">On device</p>
         <p className="mt-1 text-[11px] text-cyan">Nothing uploaded</p>
       </div>
-      <div className="float-slow float-delay absolute right-2 bottom-6 w-44 rounded-2xl border border-white/10 bg-[#111827]/90 p-3 shadow-xl backdrop-blur-md">
+      <div className="float-slow float-delay rounded-2xl border border-white/10 bg-[#111827]/90 p-3 shadow-xl backdrop-blur-md sm:absolute sm:right-2 sm:bottom-6 sm:w-44">
         <p className="text-[11px] text-muted">Export</p>
         <p className="mt-1 font-display text-lg text-white">GIF, MP4, PNG</p>
         <p className="mt-1 text-[11px] text-muted">No watermark</p>
+      </div>
       </div>
     </div>
   );

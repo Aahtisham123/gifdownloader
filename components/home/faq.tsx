@@ -27,13 +27,13 @@ export function Faq() {
                   <button
                     id={buttonId}
                     type="button"
-                    className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left font-sans text-base font-semibold sm:px-6"
+                    className="flex w-full items-start justify-between gap-4 px-5 py-5 text-left font-sans text-base font-semibold sm:px-6"
                     aria-expanded={expanded}
                     aria-controls={panelId}
                     onClick={() => setOpen(expanded ? null : index)}
                   >
                     {faq.question}
-                    <span className="text-cyan" aria-hidden="true">
+                    <span className="shrink-0 text-cyan" aria-hidden="true">
                       {expanded ? "–" : "+"}
                     </span>
                   </button>

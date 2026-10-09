@@ -51,7 +51,7 @@ export function HomeSections() {
       <Stats />
 
       <section id="tools" className="scroll-mt-28 border-y border-line bg-bg-2 py-20 sm:py-28">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-5 sm:px-6 lg:px-8">
           <Reveal>
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div className="max-w-3xl">
@@ -75,7 +75,7 @@ export function HomeSections() {
       </section>
 
       <section className="py-20 sm:py-28" id="why">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-5 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-[0.72rem] font-semibold tracking-[0.22em] text-cyan uppercase">02 / Features</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.12]">
@@ -109,7 +109,7 @@ export function HomeSections() {
       </section>
 
       <section id="how" className="border-y border-line bg-bg-2 py-20 sm:py-28">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-5 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-[0.72rem] font-semibold tracking-[0.22em] text-cyan uppercase">03 / Method</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.12]">
@@ -149,7 +149,7 @@ export function HomeSections() {
       </section>
 
       <section className="border-b border-line bg-bg py-16 sm:py-20" aria-label="Formats Gif Downloader works with">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-5 sm:px-6 lg:px-8">
           <p className="text-[0.72rem] font-semibold tracking-[0.22em] text-cyan uppercase">Formats</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">What you can bring in</h2>
         </div>
@@ -170,7 +170,7 @@ export function HomeSections() {
       </section>
 
       <section className="border-b border-line bg-bg-2 py-20 sm:py-28">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-3xl">
               <p className="text-[0.72rem] font-semibold tracking-[0.22em] text-cyan uppercase">04 / Guides</p>
@@ -212,23 +212,23 @@ export function HomeSections() {
       <Faq />
 
       <section className="py-20 sm:py-28">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#0d1117] px-6 py-14 text-center sm:px-12 sm:py-20">
             <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-accent/30 blur-3xl" />
             <div className="pointer-events-none absolute right-0 bottom-0 h-48 w-48 rounded-full bg-cyan/20 blur-3xl" />
             <div className="relative mx-auto max-w-3xl">
-              <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">Download a free GIF, or make one</h2>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">Download a free GIF, or make one</h2>
               <p className="mt-5 text-base leading-7 text-muted sm:text-lg">
                 Paste a public link into Gif Downloader, or open a maker and export the file to your phone or computer.
               </p>
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
                 <Link
                   href="/gif-downloader"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-bg transition hover:-translate-y-0.5"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-bg transition hover:-translate-y-0.5 sm:w-auto"
                 >
                   Open the downloader
                 </Link>
-                <Link href="/text-gif-maker" className="btn btn-ghost">
+                <Link href="/text-gif-maker" className="btn btn-ghost w-full sm:w-auto">
                   Make a text GIF
                 </Link>
               </div>

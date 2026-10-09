@@ -47,7 +47,7 @@ const blurbs: Record<string, string> = {
 export function ToolCard({ tool }: { tool: Tool; index?: number }) {
   const blurb = blurbs[tool.slug];
   return (
-    <article className="group relative flex h-full w-[min(85vw,22rem)] shrink-0 snap-start flex-col rounded-3xl border border-line bg-card p-6 transition duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-[0_24px_60px_-32px_rgb(99_102_241_/_0.75)] md:w-auto">
+    <article className="group relative flex h-full min-w-0 flex-col rounded-3xl border border-line bg-card p-5 transition duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-[0_24px_60px_-32px_rgb(99_102_241_/_0.75)] sm:p-6">
       <div className="pointer-events-none absolute -top-10 -right-8 h-28 w-28 rounded-full bg-accent/10 blur-2xl transition group-hover:bg-violet/20" />
       <span className="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-cyan">
         <ToolIcon name={tool.icon} className="h-5 w-5" />
@@ -79,7 +79,7 @@ export function ToolCard({ tool }: { tool: Tool; index?: number }) {
 
 export function ToolGrid({ tools }: { tools: Tool[] }) {
   return (
-    <div className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0 xl:grid-cols-3">
+    <div className="grid min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-3">
       {tools.map((tool) => (
         <ToolCard key={tool.slug} tool={tool} />
       ))}

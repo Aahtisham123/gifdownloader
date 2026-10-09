@@ -17,5 +17,4 @@ export const site = {
     "Gif Downloader App is a Free Online Tool, Where you can download, Create, and Export Gifs.",
   tagline: "Download free GIFs, make GIFs, and export.",
   updated: "2026-10-09",
-  themeStorageKey: "framepop-theme",
 } as const;

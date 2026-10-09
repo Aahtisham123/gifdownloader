@@ -2,10 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Manrope, Syne } from "next/font/google";
 import { Suspense } from "react";
 import { site } from "@/config/site";
-import { themeBootScript } from "@/lib/theme";
 import { Footer } from "@/components/layout/footer";
 import { Header, HeaderShell } from "@/components/layout/header";
-import { ThemeSync } from "@/components/layout/theme-toggle";
 import "./globals.css";
 
 const sans = Manrope({
@@ -51,10 +49,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f4f6fb" },
-    { media: "(prefers-color-scheme: dark)", color: "#070a0f" },
-  ],
+  themeColor: "#070a0f",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -62,21 +57,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-theme="dark"
-      suppressHydrationWarning
       className={`${sans.variable} ${display.variable} ${mono.variable} h-full antialiased`}
+      style={{ colorScheme: "dark" }}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
-      </head>
       <body className="flex min-h-full flex-col">
         <a className="skip-link" href="#content">
           Skip to content
         </a>
-        <ThemeSync />
         <Suspense fallback={<HeaderShell />}>
           <Header />
         </Suspense>
-        <main id="content" className="flex flex-1 flex-col pt-[4.25rem]">
+        <main id="content" className="flex min-w-0 flex-1 flex-col pt-[4.25rem]">
           {children}
         </main>
         <Footer />

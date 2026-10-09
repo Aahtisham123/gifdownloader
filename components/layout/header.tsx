@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { downloaders, makerHub, makers } from "@/config/tools";
 import { ToolIcon } from "@/components/graphics/tool-icon";
-import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Logo } from "@/components/ui/logo";
 
 const links = [
@@ -59,13 +58,11 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <ThemeToggle />
           <Link href="/gif-downloader" className="btn ml-2 min-h-10 px-4">
             Find a GIF
           </Link>
         </nav>
         <div className="flex items-center gap-2 lg:hidden">
-          <ThemeToggle />
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-card"
