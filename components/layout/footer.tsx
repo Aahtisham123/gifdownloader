@@ -53,7 +53,7 @@ export function Footer() {
       <div className="border-t border-line">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-5 py-6 text-sm text-muted sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <p>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
+            © 2026 {site.name}. All rights reserved.
           </p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {legal.map((item) => (
